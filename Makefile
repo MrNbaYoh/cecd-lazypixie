@@ -1,6 +1,6 @@
 export PYROP:="$(CURDIR)/pyrop"
 
-ROPDB_FILE = ropdb/$(VERSION).py
+ROPDB_FILE = db/$(VERSION).py
 
 all: check_ropdb rop/build
 
@@ -12,8 +12,8 @@ ifeq ($(wildcard $(ROPDB_FILE)),)
 	$(error RopDB file $(ROPDB_FILE) not found!)
 endif
 
-rop/build: make_kernelhaxcode ropdb/$(VERSION).py
-	@cp ropdb/$(VERSION).py ropdb/ropdb.py
+rop/build: make_kernelhaxcode db/$(VERSION).py
+	@cp db/$(VERSION).py db/ropdb.py
 	@make -C rop all
 
 make_kernelhaxcode :
@@ -22,4 +22,4 @@ make_kernelhaxcode :
 clean:
 	@make -C kernelhaxcode_3ds-full clean
 	@make -C rop clean
-	@rm -f ropdb/ropdb.py
+	@rm -f db/ropdb.py

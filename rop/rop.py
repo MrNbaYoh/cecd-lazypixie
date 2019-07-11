@@ -1,4 +1,4 @@
-include("../ropdb/ropdb.py")
+include("../db/ropdb.py")
 include("macros.py")
 
 from constants import *
