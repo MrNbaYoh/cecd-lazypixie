@@ -167,7 +167,7 @@ bx lr
 add_inst('SVC_REPLYANDRECEIVE', \
 """
 str r0, [sp, #-4]!;
-svc 0x4A;
+svc 0x4F;
 ldr r2, [sp];
 str r1, [r2];
 add sp, sp, #4;

@@ -1,2 +1,3 @@
 db/ropdb.py
 **/__pycache__
+**/build
